@@ -1,8 +1,5 @@
 # MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold
 
-<div align="center">
-  <img src="asset/moverse_icon.png" alt="MoVerse" width="200"/>
-</div>
 
 ## 📢 About
 
