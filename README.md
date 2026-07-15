@@ -24,7 +24,7 @@
 - **Diverse Scenes**: Works across indoor and outdoor scenes — from ancient ruins to cyberpunk streets, anime landscapes to realistic interiors
 
 <div align="center">
-  <img src="asset/moverse_frontend.gif" alt="MoVerse Frontend Demo" width="80%"/>
+  <video src="asset/moverse_frontend.mp4" controls muted loop width="80%"></video>
   <p><em>Frontend demo: scene creation from image + prompt → live streaming video generation</em></p>
 </div>
 
