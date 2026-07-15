@@ -1,0 +1,26 @@
+# world_engine/scenes_gs.yaml — Scene configuration
+# ============================================================
+# Each scene requires:
+#   name           : Unique identifier (English, used in URL and API)
+#   display_name   : Display name (shown in frontend scene list)
+#   gs_file        : Path to Gaussian scene file (.ply)
+#                    Relative to project root or absolute path
+#   prompt         : Text prompt for video generation
+#
+# Optional fields:
+#   input_image    : Thumbnail path (shown in frontend scene list)
+#   camera_position: [x, y, z]  Initial camera world position (optional)
+#   camera_look_at : [x, y, z]  Initial camera look-at point (optional)
+#
+# Scene file locations:
+#   - Pre-built examples: examples/<name>/scene.ply
+#   - Generated via UI:   world_engine/generated/<name>/scene.ply
+# ============================================================
+
+scenes:
+  # Example scene. Run ./scripts/run_pipeline.sh --example to generate from scratch.
+  - name: alcove
+    display_name: "Alcove"
+    gs_file: examples/alcove/input_pano.ply
+    input_image: examples/alcove/input.png
+    prompt: "A video of a bright breakfast alcove, curved booth seating, small round table, colorful patterned wall tiles, pendant lamp, one window with soft daylight"

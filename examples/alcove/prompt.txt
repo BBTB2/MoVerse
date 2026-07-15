@@ -1,0 +1,7 @@
+# Alcove example prompt
+# Lines starting with '#' are comments, not parsed by the pipeline.
+# The first non-comment line is the pano prompt, the second is the back_prompt.
+
+a bright breakfast alcove, curved booth seating, small round table, colorful patterned wall tiles, pendant lamp, one window with soft daylight, simple fruit bowl, cheerful creative design, clean geometry, realistic lighting
+
+with additional alcove seating and a small kitchen behind

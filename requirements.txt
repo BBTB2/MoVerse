@@ -1,0 +1,53 @@
+# ── Core ──────────────────────────────────────────────────────────────────
+torch==2.6.0
+torchvision==0.21.0
+triton==3.2.0
+numpy==1.26.4
+Pillow>=10.0.0
+opencv-python>=4.9.0
+scipy
+plyfile
+
+# ── Diffusion / Video ──────────────────────────────────────────────────────
+diffusers==0.32.2
+transformers==4.53.3
+tokenizers==0.21.4
+safetensors==0.5.3
+einops==0.8.1
+sentencepiece==0.2.0
+protobuf==6.33.5
+ftfy==6.3.1
+accelerate
+peft
+omegaconf==2.3.0
+easydict==1.13
+pydantic==2.10.6
+torchao==0.16.0
+setuptools==81.0.0
+huggingface_hub[cli]<1.0
+
+# ── Video I/O ──────────────────────────────────────────────────────────────
+imageio==2.37.0
+imageio[ffmpeg]
+av==15.1.0
+
+# ── Streaming server ───────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn>=0.30.0
+websockets>=12.0
+termcolor
+python-multipart
+
+# ── Gaussian Splatting ─────────────────────────────────────────────────────
+gsplat
+timm
+torchmetrics
+scikit-learn
+submitit
+
+# flash-attn: install separately (requires matching CUDA version):
+#   pip install flash-attn --no-build-isolation
+#
+# depth_anything_3 (NOT on PyPI — install from source):
+#   git clone https://github.com/ByteDance-Seed/Depth-Anything-3.git
+#   cd Depth-Anything-3 && pip install -e .

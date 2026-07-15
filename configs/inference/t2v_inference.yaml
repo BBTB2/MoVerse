@@ -1,0 +1,29 @@
+# Plain T2V Inference Config
+# ====================================================================
+# Runs inference.py in standard text-to-video mode.
+#
+# Usage:
+#   python inference.py \
+#       --config_path configs/inference/t2v_inference.yaml \
+#       --checkpoint_path path/to/checkpoint.pt \
+#       --output_folder outputs/t2v \
+#       --data_path prompts/MovieGenVideoBench.txt
+
+# ── Model ────────────────────────────────────────────────────────────────────
+denoising_step_list: [1000,950,900,850,800,750,700,650,600,550,500,450,400,350,300,250,200,150,100,50]
+warp_denoising_step: true
+num_frame_per_block: 21
+independent_first_frame: false
+context_noise: 0
+
+model_kwargs:
+  model_name: Wan2.1-T2V-1.3B
+  timestep_shift: 5.0
+
+# ── Scheduler ────────────────────────────────────────────────────────────────
+num_train_timestep: 1000
+timestep_shift: 5.0
+
+# ── Prompt ───────────────────────────────────────────────────────────────────
+# Set your text prompt here, or use --data_path to provide a prompt file.
+prompt: "A cinematic outdoor scene with sunlight and a gentle breeze."

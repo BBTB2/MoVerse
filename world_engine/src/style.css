@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* ─── Console Theme Colors ─── */
+:root {
+  --console-bg: #F5F0EB;
+  --console-border: #E8E3DE;
+  --screen-bg: #1a1a2e;
+  --screen-border: #2d2d44;
+  --blue-primary: #4A8FE7;
+  --blue-hover: #3A7BD5;
+  --blue-active: #2563EB;
+  --orange-primary: #F5A623;
+  --orange-hover: #E09000;
+  --text-muted: #8B8680;
+  --text-dark: #3D3833;
+}
+
+/* ─── D-Pad active highlight (keyboard reflected) ─── */
+.kbd-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(74, 143, 231, 0.08);
+  border: 1px solid rgba(74, 143, 231, 0.2);
+  transition: all 75ms;
+}
+
+.kbd-key.pressed {
+  background: var(--blue-primary);
+  border-color: var(--blue-active);
+  color: white;
+}
+
+.kbd-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(74, 143, 231, 0.08);
+  border: 1px solid rgba(74, 143, 231, 0.2);
+  color: var(--text-muted);
+  transition: all 75ms;
+}
+
+.kbd-arrow.pressed {
+  background: var(--blue-primary);
+  border-color: var(--blue-active);
+  color: white;
+}
+
+/* ─── Toggle Button ─── */
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1.5px solid var(--console-border);
+  background: white;
+  color: var(--text-dark);
+}
+
+.toggle-btn:hover {
+  border-color: var(--blue-primary);
+  background: rgba(74, 143, 231, 0.05);
+}
+
+.toggle-btn.active {
+  border-color: var(--blue-primary);
+  background: rgba(74, 143, 231, 0.1);
+  color: var(--blue-primary);
+}
+
+/* ─── Gaussian Scale slider ─── */
+input[type="range"].console-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--console-border);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].console-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(74, 143, 231, 0.3);
+  cursor: pointer;
+}
+
+input[type="range"].console-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(74, 143, 231, 0.3);
+  cursor: pointer;
+}
+
+/* ─── Scene pills ─── */
+.scene-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1.5px solid var(--console-border);
+  background: white;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scene-pill:hover {
+  border-color: var(--blue-primary);
+  color: var(--text-dark);
+}
+
+.scene-pill.active {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: white;
+}
+
+/* ─── Game Over blink ─── */
+.gameover-blink {
+  animation: gameover-blink-anim 1s step-end infinite;
+}
+
+@keyframes gameover-blink-anim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ─── Scrollbar hide ─── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

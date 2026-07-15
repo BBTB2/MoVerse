@@ -1,0 +1,17 @@
+# Trajectory file for alcove scene
+# Format: 3 lines of whitespace-separated keypoint values
+# (comment lines starting with '#' are skipped)
+#
+# Line 1: theta (degrees, positive=up)
+# Line 2: phi   (degrees, positive=right)
+# Line 3: r     (× radius, positive=forward)
+#
+# Design: forward a bit → look left → forward more → return center + look up
+#         → pan right + look up more → return → home
+
+# theta: 0→0→0→0→15→25→15→0
+0 0 0 0 15 25 15 0
+# phi: 0→0→-20→-20→0→30→20→0
+0 0 -20 -20 0 30 20 0
+# r: 0→0.05→0.05→0.15→0.15→0.15→0.1→0.05
+0 0.15 0.15 0.3 0.3 0.3 0.15 0.05

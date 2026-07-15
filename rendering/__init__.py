@@ -1,0 +1,1 @@
+"""Rendering utilities for panorama point-cloud conditioning.`n`nAttribution:`n  - MoGe (depth estimation): https://github.com/microsoft/MoGe`n  - Point cloud renderer: custom PyTorch GPU implementation`n  - Panorama post-processing: spherical coordinate back-projection`n"""
